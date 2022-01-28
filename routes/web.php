@@ -16,3 +16,11 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/event', function() {
+    event(new MessageNotification('This is my first broadcast message!'));
+});
+
+Route::gewt('/listen', function() {
+    return view('listen');
+});
